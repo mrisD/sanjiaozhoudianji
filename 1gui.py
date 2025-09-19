@@ -75,8 +75,7 @@ def buy_item():
     pyautogui.moveTo(config["buy_button_x"], config["buy_button_y"], duration=0.2)
     pyautogui.click()
     log("已点击购买按钮！")
-    pyautogui.moveTo(config["shuaxin_x"], config["shuaxin_y"], duration=0.2)
-    pyautogui.click()
+
 
 
 
@@ -92,6 +91,8 @@ def auto_buy():
                 buy_item()
         else:
             log("未识别到价格")
+        pyautogui.moveTo(config["shuaxin_x"], config["shuaxin_y"], duration=0.2)
+        pyautogui.click()
         time.sleep(0.1)
     log("自动购买已停止")
 
